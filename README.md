@@ -13,7 +13,7 @@ Manual interpretation of pH strips is subjective, while lab equipment is often t
 - Algorithm:
   1) Represent strip color in **CIE L\*a\*b\*** color space
   2) Use **K-means** to isolate the dominant reaction-pad color (reduce noise/background influence)
-  3) Estimate pH via interpolation against **pre-calibrated reference colors** (IDW-style color-to-pH mapping)
+  3) Estimate pH via interpolation against **pre-calibrated reference colors** (color-to-pH mapping)
 
 ## Results
 Across a range of test solutions, the device achieved:
@@ -22,15 +22,7 @@ Across a range of test solutions, the device achieved:
 - Correlation coefficient: R² ~ 0.985
 
 ## Repository contents
-- `docs/Colorimetric_Sensor_Final_Report.pdf` — full final report (design, theory, implementation, evaluation)
-- `assets/` — figures/photos (add screenshots of the device + key plots)
-- `src/` (optional) — code for image capture + processing pipeline
-
-## Reproducibility (recommended)
-If you add code, document:
-- Camera settings (exposure/white balance) used during calibration and inference
-- LED configuration and enclosure geometry
-- Calibration procedure (reference solutions and how color references were built)
+- Colorimetric_Sensor_Final_Report.pdf — full final report (design, theory, implementation, evaluation)
 
 ## Author
 Xuanye (Caleb) Zeng
